@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.employee-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2563eb;
+}
+
+.employee-info h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.employee-info p {
+  text-align: left;
+  margin: 10px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.employee-info strong {
+  color: #222;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.error {
+  text-align: center;
+  margin-top: 100px;
+  color: red;
+}
+
+
+@media (max-width: 900px) {
+  .employee-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
